@@ -1,0 +1,144 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: nguyen quang, spbstu, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.35.0.2
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.164.0.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+F:\QUANG\stm32\Register\stm32f4\I2C\I2C.uvprojx
+Project File Date:  11/05/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+TimerConfig.c(2): error: 'Delay.h' file not found
+#include "Delay.h"
+         ^~~~~~~~~
+1 error generated.
+compiling TimerConfig.c...
+RccConfig.c(72): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        RCC->PLLCFGR &= ~(1<<16);
+                     ~~ ^~~~~~~~
+RccConfig.c(83): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+RccConfig.c(21): warning: no previous prototype for function 'SysClockConfig' [-Wmissing-prototypes]
+void SysClockConfig(void)
+     ^
+RccConfig.c(21): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysClockConfig(void)
+^
+static 
+3 warnings generated.
+compiling RccConfig.c...
+main.c(1): warning: In file included from...
+./RccConfig.h(4): warning: no newline at end of file [-Wnewline-eof]
+void SysClockConfig(void);
+                          ^
+main.c(3): warning: no previous prototype for function 'I2C_Config' [-Wmissing-prototypes]
+void I2C_Config(void)
+     ^
+main.c(3): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C_Config(void)
+^
+static 
+main.c(41): warning: no previous prototype for function 'I2C_Start' [-Wmissing-prototypes]
+void I2C_Start(void)
+     ^
+main.c(41): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C_Start(void)
+^
+static 
+main.c(50): warning: no previous prototype for function 'I2C_Write' [-Wmissing-prototypes]
+void I2C_Write(uint8_t data)
+     ^
+main.c(50): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C_Write(uint8_t data)
+^
+static 
+main.c(71): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        uint8_t temp = I2C1->SR1 | I2C1->SR2; //read SR1 and SR2 to clear the ADDR
+                ~~~~   ~~~~~~~~~~^~~~~~~~~~~
+main.c(71): warning: unused variable 'temp' [-Wunused-variable]
+        uint8_t temp = I2C1->SR1 | I2C1->SR2; //read SR1 and SR2 to clear the ADDR
+                ^
+main.c(62): warning: no previous prototype for function 'I2C_Address' [-Wmissing-prototypes]
+void I2C_Address(uint8_t Address)
+     ^
+main.c(62): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C_Address(uint8_t Address)
+^
+static 
+main.c(73): warning: no previous prototype for function 'I2C_Stop' [-Wmissing-prototypes]
+void I2C_Stop(void)
+     ^
+main.c(73): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C_Stop(void)
+^
+static 
+main.c(77): warning: no previous prototype for function 'I2C_WriteMulti' [-Wmissing-prototypes]
+void I2C_WriteMulti(uint8_t *data, uint8_t size)
+     ^
+main.c(77): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C_WriteMulti(uint8_t *data, uint8_t size)
+^
+static 
+main.c(107): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+10 warnings generated.
+compiling main.c...
+assembling startup_stm32f407xx.s...
+compiling system_stm32f4xx.c...
+".\Objects\I2C.axf" - 1 Error(s), 13 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\nguye\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\nguye\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   MDK\Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
